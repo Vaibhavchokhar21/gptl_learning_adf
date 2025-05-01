@@ -1,10 +1,77 @@
 {
 	"name": "pl_assignment",
 	"properties": {
+		"activities": [
+			{
+				"name": "ForEach1",
+				"type": "ForEach",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@pipeline().parameters.input_value",
+						"type": "Expression"
+					},
+					"activities": [
+						{
+							"name": "test_var",
+							"type": "AppendVariable",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "append_id",
+								"value": {
+									"value": "@item()['id']",
+									"type": "Expression"
+								}
+							}
+						},
+						{
+							"name": "append_name",
+							"type": "AppendVariable",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "append_name",
+								"value": {
+									"value": "@item()['name']",
+									"type": "Expression"
+								}
+							}
+						}
+					]
+				}
+			}
+		],
 		"parameters": {
 			"input_value": {
 				"type": "array",
-				"defaultValue": "[ {\"id\":1, \"Name\": \"Ram Patil\"}, \"id\":2, \"Name\": \"Sham Patil\"}, \"id\":3, \"Name\": \"Kumar Verma\"}, \"id\":4, \"Name\": \"Ram Jadhav\"} ]"
+				"defaultValue": [
+					{
+						"id": 1,
+						"Name": "Ram Patil"
+					},
+					{
+						"id": 2,
+						"Name": "Sham Patil"
+					},
+					{
+						"id": 3,
+						"Name": "Kumar Verma"
+					},
+					{
+						"id": 4,
+						"Name": "Ram Jadhav"
+					}
+				]
+			}
+		},
+		"variables": {
+			"append_id": {
+				"type": "Array"
+			},
+			"append_name": {
+				"type": "Array"
 			}
 		},
 		"annotations": []
