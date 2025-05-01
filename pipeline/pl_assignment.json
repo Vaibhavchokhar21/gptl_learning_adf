@@ -1,0 +1,12 @@
+{
+	"name": "pl_assignment",
+	"properties": {
+		"parameters": {
+			"input_value": {
+				"type": "array",
+				"defaultValue": "[ {\"id\":1, \"Name\": \"Ram Patil\"}, \"id\":2, \"Name\": \"Sham Patil\"}, \"id\":3, \"Name\": \"Kumar Verma\"}, \"id\":4, \"Name\": \"Ram Jadhav\"} ]"
+			}
+		},
+		"annotations": []
+	}
+}
