@@ -1,0 +1,9 @@
+{
+	"name": "new-gptl-data",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "22f2f947-b5b8-4632-88a1-e0115c85504d",
+		"tenantId": "f9a318c8-9bb0-4655-8fdd-cc4467fbb864"
+	}
+}
