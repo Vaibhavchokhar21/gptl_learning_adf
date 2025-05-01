@@ -1,0 +1,11 @@
+{
+	"name": "ls_storage_account_gen2",
+	"properties": {
+		"description": "this linked service is used for connecting to azure ADLS Den2",
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://gptllearningstoragegroup.dfs.core.windows.net/"
+		}
+	}
+}
